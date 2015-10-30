@@ -20,7 +20,6 @@ var largeCloudX = -100;
 var smallCloudX = 600;
 var leavesFalling = false;
 var leavesY = 200;
-var crownOn = 300;
 
 //load the images
 function preload() {
@@ -63,7 +62,6 @@ function draw() {
 	image(smallCloud, smallCloudX, 50);
 
 	//add the tree
-
 	image(tree, 0, 0);
 
 	//make leaves fall when tree is clicked on
@@ -82,7 +80,7 @@ function draw() {
 		image(leafSeven, 220, leavesY);
 
 		if (leavesY < 500) {
-			leavesY += 0.6;
+			leavesY += 1.2;
 		}
 	}
 
@@ -94,13 +92,10 @@ function draw() {
 
 	//add the leaf crown when you click on the boy's head
 	if (mouseIsPressed) {
-		// if (mouseY > 313 && mouseY < 326);
-		crownOn = true
-	}
-
-	if (crownOn) {
+		if (mouseY > 313 && mouseY < 326);
 		image(leafCrown, mouseX - 20, 220);
 	}
 
+	//make rain when clouds are clicked on
 
 }
